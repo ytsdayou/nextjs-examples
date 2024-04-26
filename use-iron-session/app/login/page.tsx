@@ -4,7 +4,8 @@ import { loginAction } from "@/actions/login";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { FormState } from "@/lib/form/login";
-import { useFormState } from "react-dom";
+import { useFormState, useFormStatus } from "react-dom";
+import { SubmitButton } from "@/components/submit";
 
 export default function Login() {
   const [state, action] = useFormState<FormState, FormData>(loginAction, undefined);
@@ -35,7 +36,7 @@ export default function Login() {
       </div>
       {state?.errors?.password && <p className="text-red-600">{state.errors.password}</p>}
 
-      <Button type="submit">login</Button>
+      <SubmitButton />
       {state?.errors?.form && <p>{state.errors.form}</p>}
     </form>
   )

@@ -51,3 +51,9 @@ export const loginAction  = async (
     redirect('/profile');
   }
 }
+
+export const logoutAction = async () => {
+  const session = await getSession();
+  session.destroy();
+  redirect("/");
+}
