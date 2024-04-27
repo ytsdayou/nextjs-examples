@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getSession } from "@/actions/login";
 import Logout from "./logout";
 import Menu from "./menu";

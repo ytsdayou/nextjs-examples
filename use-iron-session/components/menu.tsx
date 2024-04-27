@@ -10,15 +10,15 @@ export default function Menu() {
   return <>
     <Link href="/">
       <div className={
-        classNames("hover:text-sky-500 dark:hover:text-sky-400 py-3 px-5 mr-4", {
-          'bg-muted': pathname === '/'
+        classNames("hover:text-slate-300 py-3 px-5 mr-4", {
+          'text-white hover:text-white': pathname === '/dashboard'
         })
-        }>Home</div>
+        }>Dashboard</div>
     </Link>
-    <Link href="/profile">
-      <div className={classNames("hover:text-sky-500 dark:hover:text-sky-400  py-3 px-5  mr-4", {
-          'bg-muted': pathname === '/profile'
-        })}>profile</div>
+    <Link href="/dashboard/profile">
+      <div className={classNames("hover:text-slate-300 py-3 px-5  mr-4", {
+          'text-white hover:text-white': pathname === '/dashboard/profile'
+        })}>Profile</div>
     </Link>
   </>
 }

@@ -1,9 +1,12 @@
-import Image from "next/image";
+import { getSession } from "@/actions/login";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <main className="flex">
-      this is home page
-    </main>
-  );
+export default async function Home() {
+  const session = await getSession();
+
+  if (!session.isLoggedIn) {
+    redirect('/login');
+  } else {
+    redirect('/dashboard');
+  }
 }

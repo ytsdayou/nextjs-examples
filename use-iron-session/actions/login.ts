@@ -48,7 +48,7 @@ export const loginAction  = async (
     session.error = '';
 
     await session.save();
-    redirect('/profile');
+    redirect('/dashboard');
   }
 }
 

@@ -27,10 +27,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <div className="max-w-7xl mx-auto">
-          <Head />
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   );
